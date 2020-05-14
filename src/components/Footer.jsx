@@ -7,7 +7,7 @@ export class Footer extends Component {
         <div className="container" align="center">
           <span className="text-muted">
             <strong>
-              POWERED BY <a href="https://newsapi.org"> NEWSAPI.ORG</a>
+              POWERED BY <a href="https://krishanathep.github.io/full-stack-solution/"> FULL-STACK SOLUTION</a>
             </strong>
           </span>
         </div>

@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5b9f39cc5d37482ea06c1e406abd1e76"
+      "https://gnews.io/api/v3/top-news?token=e23a9d7f2473ca23dae6dec802e6c370"
     )
       .then((res) => res.json())
       .then((res) => this.setState({ news: res.articles }));

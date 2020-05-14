@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Moment from 'react-moment'
 
 export class NewsFeeds extends Component {
   render() {
@@ -9,19 +10,21 @@ export class NewsFeeds extends Component {
         {this.props.news.map(feed => (
           <div className="col-md-4">
               <div className="card mt-3" key={feed.id}>
-                  <div className="card-header">
-                  <img className='card-img' src={feed.urlToImage} alt=""/> 
-                  </div>
                   <div className="card-body">
                      <h4 className="card-title">
-                         {feed.title}
+                         {feed.source.name}
                      </h4>
-                     <p className="card-text text-muted">
-                         {feed.description}
+                     <Moment fromNow>
+                     <p className="card-text">
+                         {feed.publishedAt}
+                     </p>
+                     </Moment>
+                     <p className="card-text  text-muted mt-3">
+                         {feed.title}
                      </p>
                   </div>
                   <div className="card-footer">
-                      <a href={feed.url} className='btn btn-primary'>GO TO LINK</a>
+                      <a href={feed.url} className='btn btn-outline-primary float-right'>GO TO LINK</a>
                   </div>
               </div>
           </div>
